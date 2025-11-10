@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Postcard Generator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:300,400|Oswald:700">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -13,15 +14,15 @@
 	<div class="content-wrapper">
 		<header>
 			<h1>Postcard Generator</h1>
-			<p class="subtitle">Generate Postcards of All 50 American States</p>
+			<p class="subtitle">Generate Postcards of All 50 American States</p>
 		</header>
 		<main role="main">
 			<div class="first step">
 				<h2>1. Choose a State</h2>
 				<select name="states" id="states">
 					<option selected disabled value="empty-state">United States of America</option>
-					<option value="al">Alabama</option>
-					<option value="ak">Alaska</option>
+					<option id ="AL" value="al">Alabama</option>
+					<option id="AK"value="ak">Alaska</option>
 					<option value="az">Arizona</option>
 					<option value="ar">Arkansas</option>
 					<option value="ca">California</option>
@@ -86,6 +87,7 @@
 <footer>
 	<p>Made in NY <br>Copyright © Postcard Generator</p>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
