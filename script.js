@@ -1,16 +1,16 @@
-const dropDown = document.getElementById('states');
-const postCard = document.getElementById('postcard');
-const greetText = document.getElementById('greeting');
-const stateHead = document.getElementById('state-heading');
+let dropDown = document.getElementById("states");
+let postCard = document.getElementById("postcard");
+let greetText = document.getElementById("greeting");
+let stateHead = document.getElementById("state-heading");
+let stateImage = document.getElementById("states");
+dropDown.addEventListener("change", updatePostCard)
 
-dropDown.addEventListener('change', function() {
-    const selectedState = dropDown.value;
-    console.log(selectedState);
-    if (selectedState){
-        document.getElementById('greeting').textContent = `Greetings from ${selectedState}!`;
-        document.getElementById('state-heading').textContent = selectedState;
-        postCard.style.backgroundImage = `url('imgs/${selectedState.toLowerCase()}.jpg')`;
-
-   } 
+function updatePostCard(){
+    var selectedState = stateImage.options[stateImage.selectedIndex].text;
+    // console.log(selectedState);
+    document.getElementById("greeting").textContent = "Greetings from";
+    document.getElementById("state-heading").textContent = selectedState;
+    postCard.style.backgroundImage = `url('img/${selectedState.value}.jpg')`;
+    console.log(`url('img/${selectedState.value}.jpg')`);
 }
-);
+
