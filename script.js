@@ -1,16 +1,13 @@
 let dropDown = document.getElementById("states");
 let postCard = document.getElementById("postcard");
-let greetText = document.getElementById("greeting");
-let stateHead = document.getElementById("state-heading");
-let stateImage = document.getElementById("states");
-dropDown.addEventListener("change", updatePostCard)
+
+dropDown.addEventListener("change", updatePostCard);
 
 function updatePostCard(){
-    var selectedState = stateImage.options[stateImage.selectedIndex].text;
-    // console.log(selectedState);
+    var selectedState = dropDown.options[dropDown.selectedIndex].text;
+    var stateAbbr = dropDown.value;
     document.getElementById("greeting").textContent = "Greetings from";
     document.getElementById("state-heading").textContent = selectedState;
-    postCard.style.backgroundImage = `url('img/${selectedState.value}.jpg')`;
-    console.log(`url('img/${selectedState.value}.jpg')`);
+    postCard.style.backgroundImage = `url('img/${stateAbbr}.jpg')`;
 }
 
